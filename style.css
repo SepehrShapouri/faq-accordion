@@ -19,6 +19,7 @@ body {
   background-image: url("./assets/images/background-pattern-desktop.svg");
   background-position: top;
   background-repeat: no-repeat;
+  background-size: 100% ;
   background-color: var(--Lightpink);
 }
 .container {
@@ -34,29 +35,17 @@ body {
   gap: 1rem;
 }
 .accordion-header_title {
-  font-size: 42px;
+  font-size: 52px;
   color: var(--Darkpurple);
   margin: 0;
-}
-.image-container {
-  width: 100vw;
-  height: 300px;
-  background-image: url("assets/images/background-pattern-desktop.svg");
-  background-size: cover;
-  background-position: center;
 }
 .accordion-wrapper {
   background-color: var(--White);
   border-radius: 15px;
   padding: 2rem;
   font-family: workSans;
-  max-width: 470px;
-  margin: 2rem;
-}
-@media all and (max-width: 450px) {
-  .accordion-wrapper {
-    /* margin-bottom: 10rem; */
-  }
+  max-width: 570px;
+  /* height: 450px; */
 }
 .title {
   font-weight: 700;
@@ -71,6 +60,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  font-size: 18px;
 }
 .accordion-title:hover {
   color: #ad28eb;
@@ -83,12 +73,13 @@ body {
   overflow: hidden;
   margin: 0;
   transition: all 0.3s ease-out;
+  font-size: 16px;
 }
 .accordion-item:last-of-type {
   border-bottom: none;
 }
-.accordion-item:last-of-type .accordion-title {
-  margin-bottom: -10px;
+.accordion-item:last-of-type .accordion-title{
+    margin-bottom: -10px;
 }
 .star {
   width: 30px;
