@@ -1,0 +1,117 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Lightpink: hsl(275, 100%, 97%);
+  --Grayishpurple: hsl(292, 16%, 49%);
+  --Darkpurple: hsl(292, 42%, 14%);
+}
+@font-face {
+  font-family: workSans;
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+  font-weight: 400 600 700;
+}
+@font-face {
+  font-family: workSans-italic;
+  src: url("./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf");
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: var(--Lightpink);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accordion-header {
+  display: flex;
+  gap: 1rem;
+}
+.accordion-header_title {
+  font-size: 42px;
+  color: var(--Darkpurple);
+  margin: 0;
+}
+.image-container {
+  width: 100vw;
+  height: 300px;
+  background-image: url("assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center;
+}
+.accordion-wrapper {
+  background-color: var(--White);
+  border-radius: 15px;
+  padding: 2rem;
+  font-family: workSans;
+  max-width: 470px;
+  margin: 2rem;
+}
+@media all and (max-width: 450px) {
+  .accordion-wrapper {
+    /* margin-bottom: 10rem; */
+  }
+}
+.title {
+  font-weight: 700;
+}
+.accordion-item {
+  border-bottom: 2px solid var(--Lightpink);
+}
+.accordion-title {
+  font-weight: 600;
+  color: var(--Darkpurple);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.accordion-title:hover {
+  color: #ad28eb;
+  transition: all 0.2s ease-in;
+}
+.accordion-content {
+  color: var(--Grayishpurple);
+  font-weight: 400;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  transition: all 0.3s ease-out;
+}
+.accordion-item:last-of-type {
+  border-bottom: none;
+}
+.accordion-item:last-of-type .accordion-title {
+  margin-bottom: -10px;
+}
+.star {
+  width: 30px;
+}
+.plus,
+.minus {
+  cursor: pointer;
+}
+.accordion-item .plus {
+  display: flex;
+}
+.accordion-item .minus {
+  display: none;
+}
+.accordion-item.active .plus {
+  display: none;
+}
+.accordion-item.active .minus {
+  display: flex;
+}
+.accordion-item.active .accordion-content {
+  overflow: auto;
+  max-height: none;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease-out;
+}
